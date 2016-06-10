@@ -7,5 +7,5 @@ MRuby::Gem::Specification.new('mruby-pg') do |spec|
   # spec.cc.flags = ["-g3", "-std=gnu99", "-O0", "-Wall", "-Werror-implicit-function-declaration", "-Wdeclaration-after-statement"]
 
   spec.cc.include_paths << `pg_config --includedir`.chomp
-  spec.linker.libraries << 'pq'
+  spec.linker.libraries << 'libpq'
 end
