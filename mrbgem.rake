@@ -6,6 +6,6 @@ MRuby::Gem::Specification.new('mruby-pg') do |spec|
   # for debug
   # spec.cc.flags = ["-g3", "-std=gnu99", "-O0", "-Wall", "-Werror-implicit-function-declaration", "-Wdeclaration-after-statement"]
 
-  spec.cc.include_paths << `pg_config --includedir --libdir -lpq`.chomp
+  spec.cc.include_paths << `pg_config --includedir pg_config --libdir -lpq`.chomp
   spec.linker.libraries << 'pq'
 end
