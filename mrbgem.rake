@@ -8,5 +8,5 @@ MRuby::Gem::Specification.new('mruby-pg') do |spec|
 
   spec.cc.include_paths << `pg_config --includedir`.chomp
   spec.linker.library_paths << `pg_config --libdir`.chomp
-  spec.linker.libraries << 'libpq'
+  spec.linker.libraries << 'pq'
 end
